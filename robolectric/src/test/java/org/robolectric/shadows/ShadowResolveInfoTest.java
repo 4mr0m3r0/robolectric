@@ -22,12 +22,6 @@ public class ShadowResolveInfoTest {
   }
 
   @Test
-  public void testLoadLabel() {
-    mShadowInfo.setLabel("test");
-    assertThat((CharSequence) "test").isEqualTo(mResolveInfo.loadLabel(null));
-  }
-
-  @Test
   public void testNewResolveInfoWithActivity() {
     assertThat(mResolveInfo.loadLabel(null).toString()).isEqualTo("name");
     assertThat(mResolveInfo.activityInfo.packageName).isEqualTo("package");
